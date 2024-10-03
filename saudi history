@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة عبر التاريخ</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif; /* استبدل باسم الخط إذا لزم الأمر */
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50; /* أخضر غامق */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .burger-menu {
+            display: none; /* مخفي بشكل افتراضي */
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .burger-menu .bar {
+            height: 4px;
+            width: 30px;
+            background-color: white; /* اللون الأبيض للخطوط */
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #nav-menu {
+            display: flex; /* عرض قائمة التنقل كحاوية مرنة */
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        #nav-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        #nav-menu li {
+            margin: 0 15px;
+        }
+
+        #nav-menu a {
+            text-decoration: none;
+            color: #4CAF50; /* أخضر غامق */
+        }
+
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        hr {
+            border: 1px solid #4CAF50; /* خط أخضر بين الأقسام */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* استعلام وسائط للشاشات الأصغر */
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: flex; /* عرض قائمة البرغر في الشاشات الصغيرة */
+            }
+
+            #nav-menu {
+                display: none; /* إخفاء قائمة التنقل بشكل افتراضي */
+                flex-direction: column; /* تغيير التخطيط إلى عمودي */
+                background-color: #fff; /* خلفية بيضاء للقائمة */
+                position: absolute; /* وضع مطلق للقائمة */
+                top: 60px; /* تعديل هذه القيمة لتحديد موضع القائمة */
+                right: 0; /* محاذاة إلى اليمين */
+                width: 100%; /* عرض كامل */
+                border: 1px solid #4CAF50; /* حدود خضراء */
+            }
+
+            #nav-menu.active {
+                display: flex; /* عرض قائمة التنقل عندما تكون نشطة */
+            }
+
+            #nav-menu ul {
+                flex-direction: column; /* تخطيط عمودي */
+            }
+
+            #nav-menu li {
+                margin: 10px 0; /* إضافة هوامش لفرز المساحة الرأسية */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>رحلة عبر التاريخ</h1>
+        <p>تاريخ، ثقافة، وتقاليد المملكة</p>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#history">تاريخ المملكة العربية السعودية</a></li>
+            <li><a href="#culture">الثقافة</a></li>
+            <li><a href="#traditions">العادات والتقاليد</a></li>
+            <li><a href="#tourism">المعالم السياحية</a></li>
+            <li><a href="#nature">الطبيعة</a></li>
+        </ul>
+    </nav>
+
+    <section id="history">
+        <h2>تاريخ المملكة العربية السعودية</h2>
+        <img src="images/history.jpg" alt="تاريخ المملكة" class="section-img">
+        <p>تاريخ المملكة العربية السعودية يمتد لقرون، ويشمل ثلاث دول رئيسية: الدولة السعودية الأولى، الدولة السعودية الثانية، والمملكة العربية السعودية الحديثة. تأسست الدولة السعودية الأولى في عام 1744م على يد الإمام محمد بن سعود في الدرعية.</p>
+        <p>تلتها الدولة السعودية الثانية التي تأسست في عام 1824م على يد الإمام تركي بن عبدالله، واستمرت حتى عام 1891م. أما المملكة العربية السعودية الحديثة، فقد أسسها الملك عبدالعزيز بن عبدالرحمن آل سعود في عام 1932م، بعد استعادة الرياض وتوحيد البلاد.</p>
+    </section>
+
+    <hr>
+
+    <section id="culture">
+        <h2>الثقافة</h2>
+        <img src="images/culture.jpg" alt="الثقافة السعودية" class="section-img">
+        <p>تعتبر الثقافة السعودية غنية ومتنوعة، حيث تضم الفنون الشعبية، والموسيقى التقليدية، والأدب. تحتفل المملكة بمهرجانات ثقافية تعكس تراثها العريق، مثل مهرجان الجنادرية.</p>
+        <p>تتميز السعودية أيضاً بالمأكولات التقليدية التي تشمل الكبسة، والمندي، والمأكولات البحرية، مما يعكس تنوع المناطق المختلفة في المملكة.</p>
+    </section>
+
+    <hr>
+
+    <section id="traditions">
+        <h2>العادات والتقاليد</h2>
+        <img src="images/traditions.jpg" alt="التقاليد السعودية" class="section-img">
+        <p>تحافظ المملكة العربية السعودية على تقاليد عريقة تعود لآلاف السنين، بما في ذلك الكرم والضيافة. يعتبر القهوة العربية رمزاً للضيافة، ويتم تقديمها في المناسبات المختلفة.</p>
+        <p>كما تُعد العادات الاجتماعية مثل الاحتفال بالزواج واحتفالات العيد جزءاً لا يتجزأ من الهوية الثقافية للمملكة.</p>
+    </section>
+
+    <hr>
+
+    <section id="tourism">
+        <h2>المعالم السياحية</h2>
+        <img src="images/tourism.jpg" alt="المعالم السياحية" class="section-img">
+        <p>تشهد المملكة العربية السعودية نمواً كبيراً في قطاع السياحة، مع تطوير مشاريع جديدة مثل مشروع البحر الأحمر، الذي يهدف إلى تحويل ساحل البحر الأحمر إلى وجهة سياحية عالمية.</p>
+        <p>بالإضافة إلى ذلك، تعتبر مدينة العلا من أبرز الوجهات السياحية، حيث تضم آثاراً تاريخية ومناظر طبيعية خلابة.</p>
+    </section>
+
+    <hr>
+
+    <section id="nature">
+        <h2>الطبيعة</h2>
+        <img src="images/nature.jpg" alt="الطبيعة السعودية" class="section-img">
+        <p>تتميز المملكة العربية السعودية بتنوعها الطبيعي، بدءاً من الصحراء الكبرى، وصولاً إلى السواحل الخلابة على البحر الأحمر والخليج العربي.</p>
+        <p>تحتوي المملكة أيضاً على العديد من المحميات الطبيعية، مثل محمية الطيور في جزيرة فرسان، التي تعد موطناً لعدد من الأنواع النادرة والمهددة بالانقراض.</p>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.toggle("active"); // قم بتبديل الفئة "active"
+        }
+    </script>
+
+</body>
+</html>
